@@ -9,9 +9,78 @@ body
 {
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #898989;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23606060' fill-opacity='0.4'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    font-family: Calibri, Tahoma;
+    color:white;
+    text-shadow: 0rem 0.2rem 0.1rem rgba(31, 31, 31,0.5);
+}
+
+h1
+{
+
+    margin-top: 3rem;
+    text-align: center;
+    font-size:4.5rem;
+    letter-spacing: 0.3rem;
+
+}
+
+.loader 
+{    
+  --r1: 154%;
+  --r2: 68.5%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%; 
+  background:
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%,0% 0%,100% 0%;
+  background-repeat:no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 
+{
+    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+    100% {background-position:    0% 100%,100% 100%,200% 100%}
+}
+
+
+.MainContainer
+{
+    margin: 2rem 30%;
+}
+
+.MainContainer img
+{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width:600px) {
+
+.MainContainer
+{
+    margin: 2rem;
+}
+
+h1
+{
+
+    margin-top: 3rem;
+    text-align: center;
+    font-size:1.5rem;
+    letter-spacing: 0.3rem;
+
+}
+
 }
